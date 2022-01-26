@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Entidades" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Entidades" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="MenuDiaEntidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FecMen" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdBebPer" type="xs:int" />
+      <xs:element minOccurs="0" name="IdEntPer" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSegPer" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSopaPer" type="xs:int" />
+      <xs:element minOccurs="0" name="NumMen" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MenuDiaEntidad" nillable="true" type="tns:MenuDiaEntidad" />
+  <xs:complexType name="ArrayOfMenuDiaEntidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MenuDiaEntidad" nillable="true" type="tns:MenuDiaEntidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMenuDiaEntidad" nillable="true" type="tns:ArrayOfMenuDiaEntidad" />
+  <xs:complexType name="ArrayOfMenuDiaJoin">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MenuDiaJoin" nillable="true" type="tns:MenuDiaJoin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMenuDiaJoin" nillable="true" type="tns:ArrayOfMenuDiaJoin" />
+  <xs:complexType name="MenuDiaJoin">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bebida" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Entrada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Numero" type="xs:int" />
+      <xs:element minOccurs="0" name="Segundo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sopa" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MenuDiaJoin" nillable="true" type="tns:MenuDiaJoin" />
+  <xs:complexType name="SopasEntidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdSopa" type="xs:int" />
+      <xs:element minOccurs="0" name="ImgSopa" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IngSopa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomSopa" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SopasEntidad" nillable="true" type="tns:SopasEntidad" />
+  <xs:complexType name="ArrayOfSopasEntidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SopasEntidad" nillable="true" type="tns:SopasEntidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSopasEntidad" nillable="true" type="tns:ArrayOfSopasEntidad" />
+  <xs:complexType name="SegundosEntidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdSegundo" type="xs:int" />
+      <xs:element minOccurs="0" name="ImgSegundo" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IngSegundo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomSegundo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SegundosEntidad" nillable="true" type="tns:SegundosEntidad" />
+  <xs:complexType name="ArrayOfSegundosEntidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SegundosEntidad" nillable="true" type="tns:SegundosEntidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSegundosEntidad" nillable="true" type="tns:ArrayOfSegundosEntidad" />
+  <xs:complexType name="BebidasEntidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdBebida" type="xs:int" />
+      <xs:element minOccurs="0" name="ImgBebida" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IngBebida" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomBebida" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BebidasEntidad" nillable="true" type="tns:BebidasEntidad" />
+  <xs:complexType name="ArrayOfBebidasEntidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BebidasEntidad" nillable="true" type="tns:BebidasEntidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBebidasEntidad" nillable="true" type="tns:ArrayOfBebidasEntidad" />
+  <xs:complexType name="EntradasEntidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdEntrada" type="xs:int" />
+      <xs:element minOccurs="0" name="ImgEntrada" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IngEntrada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomEntrada" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntradasEntidad" nillable="true" type="tns:EntradasEntidad" />
+  <xs:complexType name="ArrayOfEntradasEntidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntradasEntidad" nillable="true" type="tns:EntradasEntidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntradasEntidad" nillable="true" type="tns:ArrayOfEntradasEntidad" />
+  <xs:complexType name="PedidosEntidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CantidadPedido" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPedPer" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreCliente" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PedidosEntidad" nillable="true" type="tns:PedidosEntidad" />
+</xs:schema>

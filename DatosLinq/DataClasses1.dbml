@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AppMenuDia" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=AppMenuDia.mssql.somee.com;Initial Catalog=AppMenuDia;Persist Security Info=True;User ID=AppDistribuida_SQLLogin_1" SettingsObjectName="DatosLinq.Properties.Settings" SettingsPropertyName="AppMenuDiaConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BEBIDAS" Member="BEBIDAS">
+    <Type Name="BEBIDAS">
+      <Column Name="ID_BEB" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOM_BEB" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IMG_BEB" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ING_BEB" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="BEBIDAS_MENU_DEL_DIA" Member="MENU_DEL_DIA" ThisKey="ID_BEB" OtherKey="ID_BEB_PER" Type="MENU_DEL_DIA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ENTRADAS" Member="ENTRADAS">
+    <Type Name="ENTRADAS">
+      <Column Name="ID_ENT" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOM_ENT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IMG_ENT" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ING_ENT" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="ENTRADAS_MENU_DEL_DIA" Member="MENU_DEL_DIA" ThisKey="ID_ENT" OtherKey="ID_ENT_PER" Type="MENU_DEL_DIA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MENU_DEL_DIA" Member="MENU_DEL_DIA">
+    <Type Name="MENU_DEL_DIA">
+      <Column Name="NUM_MEN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_SOP_PER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_SEG_PER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_BEB_PER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_ENT_PER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FEC_MEN" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="MENU_DEL_DIA_PEDIDOS" Member="PEDIDOS" ThisKey="NUM_MEN" OtherKey="ID_MEN_PER" Type="PEDIDOS" />
+      <Association Name="BEBIDAS_MENU_DEL_DIA" Member="BEBIDAS" ThisKey="ID_BEB_PER" OtherKey="ID_BEB" Type="BEBIDAS" IsForeignKey="true" />
+      <Association Name="ENTRADAS_MENU_DEL_DIA" Member="ENTRADAS" ThisKey="ID_ENT_PER" OtherKey="ID_ENT" Type="ENTRADAS" IsForeignKey="true" />
+      <Association Name="SEGUNDOS_MENU_DEL_DIA" Member="SEGUNDOS" ThisKey="ID_SEG_PER" OtherKey="ID_SEG" Type="SEGUNDOS" IsForeignKey="true" />
+      <Association Name="SOPAS_MENU_DEL_DIA" Member="SOPAS" ThisKey="ID_SOP_PER" OtherKey="ID_SOP" Type="SOPAS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SEGUNDOS" Member="SEGUNDOS">
+    <Type Name="SEGUNDOS">
+      <Column Name="ID_SEG" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOM_SEG" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IMG_SEG" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ING_SEG" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="SEGUNDOS_MENU_DEL_DIA" Member="MENU_DEL_DIA" ThisKey="ID_SEG" OtherKey="ID_SEG_PER" Type="MENU_DEL_DIA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SOPAS" Member="SOPAS">
+    <Type Name="SOPAS">
+      <Column Name="ID_SOP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOM_SOP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IMG_SOP" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ING_SOP" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="SOPAS_MENU_DEL_DIA" Member="MENU_DEL_DIA" ThisKey="ID_SOP" OtherKey="ID_SOP_PER" Type="MENU_DEL_DIA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PEDIDOS" Member="PEDIDOS">
+    <Type Name="PEDIDOS">
+      <Column Name="ID_PED" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CAN_PED" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NOM_CLI_PED" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID_MEN_PER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="MENU_DEL_DIA_PEDIDOS" Member="MENU_DEL_DIA" ThisKey="ID_MEN_PER" OtherKey="NUM_MEN" Type="MENU_DEL_DIA" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
