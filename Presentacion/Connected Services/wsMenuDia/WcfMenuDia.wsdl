@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WcfMenuDia" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://www.restauranteservices.somee.com/WcfMenuDia.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://www.restauranteservices.somee.com/WcfMenuDia.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://www.restauranteservices.somee.com/WcfMenuDia.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Entidades" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWcfMenuDia_GuardarMenuDia_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarMenuDia" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_GuardarMenuDia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarMenuDiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverListaMenuDia_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverListaMenuDia" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverListaMenuDia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverListaMenuDiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverListaMenuDiaJoin_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverListaMenuDiaJoin" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverListaMenuDiaJoin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverListaMenuDiaJoinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverMenuDiaPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverMenuDiaPorId" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverMenuDiaPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverMenuDiaPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_EliminarMenuDia_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarMenuDia" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_EliminarMenuDia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarMenuDiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverMenuDiaPorFecha_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverMenuDiaPorFecha" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverMenuDiaPorFecha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverMenuDiaPorFechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_GuardarSopa_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarSopa" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_GuardarSopa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarSopaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverListaSopas_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverListaSopas" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverListaSopas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverListaSopasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverSopasPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverSopasPorId" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverSopasPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverSopasPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_EliminarSopa_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarSopa" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_EliminarSopa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarSopaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverIngredientesSopasPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverIngredientesSopasPorId" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverIngredientesSopasPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverIngredientesSopasPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_GuardarSegundo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarSegundo" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_GuardarSegundo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarSegundoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverListaSegundos_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverListaSegundos" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverListaSegundos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverListaSegundosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverSegundosPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverSegundosPorId" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverSegundosPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverSegundosPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_EliminarSegundo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarSegundo" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_EliminarSegundo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarSegundoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverIngredientesSegundoPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverIngredientesSegundoPorId" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverIngredientesSegundoPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverIngredientesSegundoPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_GuardarBebida_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarBebida" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_GuardarBebida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarBebidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverListaBebidas_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverListaBebidas" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverListaBebidas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverListaBebidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverBebidasPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverBebidasPorId" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverBebidasPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverBebidasPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_EliminarBebida_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarBebida" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_EliminarBebida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarBebidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverIngredientesBebidaPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverIngredientesBebidaPorId" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverIngredientesBebidaPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverIngredientesBebidaPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_GuardarEntrada_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarEntrada" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_GuardarEntrada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarEntradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverListaEntrada_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverListaEntrada" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverListaEntrada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverListaEntradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverEntradasPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverEntradasPorId" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverEntradasPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverEntradasPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_EliminarEntrada_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarEntrada" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_EliminarEntrada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarEntradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverIngredientesEntradaPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverIngredientesEntradaPorId" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_DevolverIngredientesEntradaPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolverIngredientesEntradaPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_GuardarPedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarPedido" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMenuDia_GuardarPedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarPedidoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWcfMenuDia">
+    <wsdl:operation name="GuardarMenuDia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/GuardarMenuDia" message="tns:IWcfMenuDia_GuardarMenuDia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/GuardarMenuDiaResponse" message="tns:IWcfMenuDia_GuardarMenuDia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverListaMenuDia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverListaMenuDia" message="tns:IWcfMenuDia_DevolverListaMenuDia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverListaMenuDiaResponse" message="tns:IWcfMenuDia_DevolverListaMenuDia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverListaMenuDiaJoin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverListaMenuDiaJoin" message="tns:IWcfMenuDia_DevolverListaMenuDiaJoin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverListaMenuDiaJoinResponse" message="tns:IWcfMenuDia_DevolverListaMenuDiaJoin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverMenuDiaPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverMenuDiaPorId" message="tns:IWcfMenuDia_DevolverMenuDiaPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverMenuDiaPorIdResponse" message="tns:IWcfMenuDia_DevolverMenuDiaPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarMenuDia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/EliminarMenuDia" message="tns:IWcfMenuDia_EliminarMenuDia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/EliminarMenuDiaResponse" message="tns:IWcfMenuDia_EliminarMenuDia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverMenuDiaPorFecha">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverMenuDiaPorFecha" message="tns:IWcfMenuDia_DevolverMenuDiaPorFecha_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverMenuDiaPorFechaResponse" message="tns:IWcfMenuDia_DevolverMenuDiaPorFecha_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarSopa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/GuardarSopa" message="tns:IWcfMenuDia_GuardarSopa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/GuardarSopaResponse" message="tns:IWcfMenuDia_GuardarSopa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverListaSopas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverListaSopas" message="tns:IWcfMenuDia_DevolverListaSopas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverListaSopasResponse" message="tns:IWcfMenuDia_DevolverListaSopas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverSopasPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverSopasPorId" message="tns:IWcfMenuDia_DevolverSopasPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverSopasPorIdResponse" message="tns:IWcfMenuDia_DevolverSopasPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSopa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/EliminarSopa" message="tns:IWcfMenuDia_EliminarSopa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/EliminarSopaResponse" message="tns:IWcfMenuDia_EliminarSopa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverIngredientesSopasPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverIngredientesSopasPorId" message="tns:IWcfMenuDia_DevolverIngredientesSopasPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverIngredientesSopasPorIdResponse" message="tns:IWcfMenuDia_DevolverIngredientesSopasPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarSegundo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/GuardarSegundo" message="tns:IWcfMenuDia_GuardarSegundo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/GuardarSegundoResponse" message="tns:IWcfMenuDia_GuardarSegundo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverListaSegundos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverListaSegundos" message="tns:IWcfMenuDia_DevolverListaSegundos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverListaSegundosResponse" message="tns:IWcfMenuDia_DevolverListaSegundos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverSegundosPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverSegundosPorId" message="tns:IWcfMenuDia_DevolverSegundosPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverSegundosPorIdResponse" message="tns:IWcfMenuDia_DevolverSegundosPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSegundo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/EliminarSegundo" message="tns:IWcfMenuDia_EliminarSegundo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/EliminarSegundoResponse" message="tns:IWcfMenuDia_EliminarSegundo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverIngredientesSegundoPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverIngredientesSegundoPorId" message="tns:IWcfMenuDia_DevolverIngredientesSegundoPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverIngredientesSegundoPorIdResponse" message="tns:IWcfMenuDia_DevolverIngredientesSegundoPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarBebida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/GuardarBebida" message="tns:IWcfMenuDia_GuardarBebida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/GuardarBebidaResponse" message="tns:IWcfMenuDia_GuardarBebida_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverListaBebidas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverListaBebidas" message="tns:IWcfMenuDia_DevolverListaBebidas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverListaBebidasResponse" message="tns:IWcfMenuDia_DevolverListaBebidas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverBebidasPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverBebidasPorId" message="tns:IWcfMenuDia_DevolverBebidasPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverBebidasPorIdResponse" message="tns:IWcfMenuDia_DevolverBebidasPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBebida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/EliminarBebida" message="tns:IWcfMenuDia_EliminarBebida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/EliminarBebidaResponse" message="tns:IWcfMenuDia_EliminarBebida_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverIngredientesBebidaPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverIngredientesBebidaPorId" message="tns:IWcfMenuDia_DevolverIngredientesBebidaPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverIngredientesBebidaPorIdResponse" message="tns:IWcfMenuDia_DevolverIngredientesBebidaPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarEntrada">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/GuardarEntrada" message="tns:IWcfMenuDia_GuardarEntrada_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/GuardarEntradaResponse" message="tns:IWcfMenuDia_GuardarEntrada_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverListaEntrada">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverListaEntrada" message="tns:IWcfMenuDia_DevolverListaEntrada_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverListaEntradaResponse" message="tns:IWcfMenuDia_DevolverListaEntrada_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverEntradasPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverEntradasPorId" message="tns:IWcfMenuDia_DevolverEntradasPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverEntradasPorIdResponse" message="tns:IWcfMenuDia_DevolverEntradasPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEntrada">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/EliminarEntrada" message="tns:IWcfMenuDia_EliminarEntrada_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/EliminarEntradaResponse" message="tns:IWcfMenuDia_EliminarEntrada_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolverIngredientesEntradaPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverIngredientesEntradaPorId" message="tns:IWcfMenuDia_DevolverIngredientesEntradaPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/DevolverIngredientesEntradaPorIdResponse" message="tns:IWcfMenuDia_DevolverIngredientesEntradaPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarPedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMenuDia/GuardarPedido" message="tns:IWcfMenuDia_GuardarPedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMenuDia/GuardarPedidoResponse" message="tns:IWcfMenuDia_GuardarPedido_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWcfMenuDia" type="tns:IWcfMenuDia">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GuardarMenuDia">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/GuardarMenuDia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverListaMenuDia">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverListaMenuDia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverListaMenuDiaJoin">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverListaMenuDiaJoin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverMenuDiaPorId">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverMenuDiaPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarMenuDia">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/EliminarMenuDia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverMenuDiaPorFecha">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverMenuDiaPorFecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarSopa">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/GuardarSopa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverListaSopas">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverListaSopas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverSopasPorId">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverSopasPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSopa">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/EliminarSopa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverIngredientesSopasPorId">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverIngredientesSopasPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarSegundo">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/GuardarSegundo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverListaSegundos">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverListaSegundos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverSegundosPorId">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverSegundosPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSegundo">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/EliminarSegundo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverIngredientesSegundoPorId">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverIngredientesSegundoPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarBebida">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/GuardarBebida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverListaBebidas">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverListaBebidas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverBebidasPorId">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverBebidasPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBebida">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/EliminarBebida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverIngredientesBebidaPorId">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverIngredientesBebidaPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarEntrada">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/GuardarEntrada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverListaEntrada">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverListaEntrada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverEntradasPorId">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverEntradasPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEntrada">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/EliminarEntrada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolverIngredientesEntradaPorId">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/DevolverIngredientesEntradaPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarPedido">
+      <soap:operation soapAction="http://tempuri.org/IWcfMenuDia/GuardarPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WcfMenuDia">
+    <wsdl:port name="BasicHttpBinding_IWcfMenuDia" binding="tns:BasicHttpBinding_IWcfMenuDia">
+      <soap:address location="http://www.restauranteservices.somee.com/WcfMenuDia.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d1c9a9d8-e86c-40c4-b51a-7991cfcaff33" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://www.restauranteservices.somee.com/WcfMenuDia.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WcfMenuDia.wsdl" MetadataType="Wsdl" ID="3c116b30-abc3-4c93-a205-13916c5e29f0" SourceId="1" SourceUrl="http://www.restauranteservices.somee.com/WcfMenuDia.svc?wsdl" />
+    <MetadataFile FileName="WcfMenuDia.xsd" MetadataType="Schema" ID="9585ee40-85c1-49f7-9f6b-907e290be90e" SourceId="1" SourceUrl="http://www.restauranteservices.somee.com/WcfMenuDia.svc?xsd=xsd0" />
+    <MetadataFile FileName="WcfMenuDia1.xsd" MetadataType="Schema" ID="f8e1f2ce-2369-4a49-85eb-f51bb733546d" SourceId="1" SourceUrl="http://www.restauranteservices.somee.com/WcfMenuDia.svc?xsd=xsd2" />
+    <MetadataFile FileName="WcfMenuDia2.xsd" MetadataType="Schema" ID="7b3f0d2b-2eec-4a02-92b8-5f2d074a50cd" SourceId="1" SourceUrl="http://www.restauranteservices.somee.com/WcfMenuDia.svc?xsd=xsd1" />
+    <MetadataFile FileName="WcfMenuDia.disco" MetadataType="Disco" ID="bd6ada9e-cc4f-4773-906e-f09bfd4f14de" SourceId="1" SourceUrl="http://www.restauranteservices.somee.com/WcfMenuDia.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

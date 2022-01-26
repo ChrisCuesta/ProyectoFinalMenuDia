@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="892ebb00-10bc-47d8-af00-53d7a9735b74" absoluteBounds="0.5, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/BEBIDAS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7071ca55-ca87-4c9e-97e0-8b74e2bb6d24" absoluteBounds="0.515, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0ad59eb4-8c14-47a5-a400-8c1a59a8669b" absoluteBounds="5.375, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/ENTRADAS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1214f7a2-35da-4f85-b7a6-de9b9aed3971" absoluteBounds="5.3900000000000006, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="13ee8364-367b-4207-81ba-eb71b4d8ec62" absoluteBounds="2.875, 2.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DataClasses1DataContext/MENU_DEL_DIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="18aa313e-f776-45c5-b85c-897e8d4b3e44" absoluteBounds="2.89, 2.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 2.07859537760417); (2.875 : 2.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/BEBIDAS/BEBIDAS_MENU_DEL_DIA" />
+      <nodes>
+        <classShapeMoniker Id="892ebb00-10bc-47d8-af00-53d7a9735b74" />
+        <classShapeMoniker Id="13ee8364-367b-4207-81ba-eb71b4d8ec62" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.375 : 2.07859537760417); (4.875 : 2.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/ENTRADAS/ENTRADAS_MENU_DEL_DIA" />
+      <nodes>
+        <classShapeMoniker Id="0ad59eb4-8c14-47a5-a400-8c1a59a8669b" />
+        <classShapeMoniker Id="13ee8364-367b-4207-81ba-eb71b4d8ec62" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c314bf88-7a67-4067-a469-9762734de0ca" absoluteBounds="0.5, 3, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/SEGUNDOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a78b7565-b96d-4118-837a-0f7d8f03fec6" absoluteBounds="0.51500000000000012, 3.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 3.73159912109375); (2.875 : 3.73159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/SEGUNDOS/SEGUNDOS_MENU_DEL_DIA" />
+      <nodes>
+        <classShapeMoniker Id="c314bf88-7a67-4067-a469-9762734de0ca" />
+        <classShapeMoniker Id="13ee8364-367b-4207-81ba-eb71b4d8ec62" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="57596e1a-cc7d-4e3f-8701-bc14eb0fc406" absoluteBounds="5.25, 3.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/SOPAS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1cf88b20-4b65-4d32-be3e-b7e391f981ee" absoluteBounds="5.265, 3.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 3.79409912109375); (4.875 : 3.79409912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/SOPAS/SOPAS_MENU_DEL_DIA" />
+      <nodes>
+        <classShapeMoniker Id="57596e1a-cc7d-4e3f-8701-bc14eb0fc406" />
+        <classShapeMoniker Id="13ee8364-367b-4207-81ba-eb71b4d8ec62" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9cf36433-59c8-4eb7-a809-e96cd825543d" absoluteBounds="3.25, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/PEDIDOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf47db19-6e10-49d0-8266-1459d23528ef" absoluteBounds="3.2649999999999997, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.0312475 : 2.5); (4.0312475 : 2.07859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/MENU_DEL_DIA/MENU_DEL_DIA_PEDIDOS" />
+      <nodes>
+        <classShapeMoniker Id="13ee8364-367b-4207-81ba-eb71b4d8ec62" />
+        <classShapeMoniker Id="9cf36433-59c8-4eb7-a809-e96cd825543d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
