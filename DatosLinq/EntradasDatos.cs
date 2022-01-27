@@ -8,6 +8,11 @@ namespace DatosLinq
 {
     public static class EntradasDatos
     {
+        /// <summary>
+        /// Se ingresara una nueva entrada junto a los datos solicitados de la base de datos
+        /// </summary>
+        /// <param name="entrada">La variable que se debe ingresar</param>
+        /// <returns>La entradajunto a los datos ingresados</returns>
         public static EntradasEntidad Nuevo( EntradasEntidad entrada)
         {
             ENTRADAS e = new ENTRADAS();
@@ -23,6 +28,11 @@ namespace DatosLinq
             entrada.IdEntrada = e.ID_ENT;
             return entrada;
         }
+        /// <summary>
+        /// Se obtendra los datos de las entradas ingresadas para modificarlos
+        /// </summary>
+        /// <param name="entrada">Variable donde se encuentra los datos ingresados</param>
+        /// <returns>Nombre de la varibale la cual hemos modificado</returns>
         public static EntradasEntidad Actualizar(EntradasEntidad entrada)
         {
             try
@@ -46,6 +56,11 @@ namespace DatosLinq
                 throw;
             }
         }
+        /// <summary>
+        /// Se obtendra la entrada junto a los datos ingresador para poder eliminar 
+        /// </summary>
+        /// <param name="id">Identificador de la entrada que ingresamos y seleccionamos </param>
+        /// <returns>Se obtiene un boolean que ejecuta la accion de eliminar segun proceda el boton</returns>
         public static bool EliminarEntrada(int id)
         {
             try
@@ -66,6 +81,10 @@ namespace DatosLinq
             }
 
         }
+        /// <summary>
+        /// Se enlistara las entradas ingresadas dentro de la base de datos
+        /// </summary>
+        /// <returns>Se devuelve todas las variables ingresadas en dicha tabla</returns>
         public static List<EntradasEntidad> DevolverEntradas()
         {
             List<EntradasEntidad> listaEntradas= new List<EntradasEntidad>();
@@ -97,6 +116,11 @@ namespace DatosLinq
                 throw;
             }
         }
+        /// <summary>
+        /// Se obtiene la entrada seleccionada por el id para tener en cuenta los datos
+        /// </summary>
+        /// <param name="id">Identificador de la entrada que seleccionamos </param>
+        /// <returns>Devuelve los datos de la entrada seleccionada</returns>
         public static EntradasEntidad DevolverEntradaPorId(int id)
         {
             EntradasEntidad entrada = new EntradasEntidad();
@@ -111,6 +135,11 @@ namespace DatosLinq
             }
             return entrada;
         }
+        /// <summary>
+        /// Se obtiene la entrada seleccionada por id para tener acceso a los datos de los ingrediente
+        /// </summary>
+        /// <param name="id">Identificador de la entrada que seleccionamos</param>
+        /// <returns>retorna la entrada seleccionada junto a sus datos para poder acceder a los ingrdientes</returns>
         public static EntradasEntidad DevolverIngredientesEntradaPorId(int id)
         {
             EntradasEntidad entrada = new EntradasEntidad();
