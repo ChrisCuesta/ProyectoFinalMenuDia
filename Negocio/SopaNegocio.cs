@@ -50,7 +50,7 @@ namespace Negocio
         /// Devolvers the ingredientes sopas por identifier.
         /// </summary>
         /// <param name="id">The identifier.</param>
-        /// <returns>Devolvers the ingredientes sopas por identifier.</returns>
+        /// <returns>Devolvers the ingredientes sopas por identifier.</returns>//
         public static SopasEntidad DevolverIngredientesSopasPorId(int id)
         {
             return SopasDatos.DevolverIngredientesSopasPorId(id);
