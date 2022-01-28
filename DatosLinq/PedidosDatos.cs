@@ -9,6 +9,11 @@ namespace DatosLinq
 {
     public static class PedidosDatos
     {
+        /// <summary>
+        /// Se ingresara un nuevo pedido
+        /// </summary>
+        /// <param name="pedidoMenu">Variable donde se ingresa el pedido</param>
+        /// <returns>Devuelve el pedido seleccionado del menu</returns>
         public static PedidosEntidad Nuevo(PedidosEntidad pedidoMenu)
         {
             PEDIDOS ped = new PEDIDOS();
@@ -24,6 +29,11 @@ namespace DatosLinq
             pedidoMenu.Id = ped.ID_PED;
             return pedidoMenu;
         }
+        /// <summary>
+        /// Se modificara el pedido realizado
+        /// </summary>
+        /// <param name="pedidoMenu">variable donde se ingresan los datos del pedido </param>
+        /// <returns>Se devuelve el pedido del menu seleccionado junto a sus modificaciones</returns>
         public static PedidosEntidad Actualizar(PedidosEntidad pedidoMenu)
         {
             try
