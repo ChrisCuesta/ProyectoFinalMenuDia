@@ -9,6 +9,11 @@ namespace DatosLinq
 {
     public static class MenuDiaDatos
     {
+        /// <summary>
+        /// Se ingresara un nuevo menu
+        /// </summary>
+        /// <param name="menuDia">variable donde se ingresaran los datos del nuevo menu</param>
+        /// <returns>Devuelve el menu ingresado junto a sus datos</returns>
         public static MenuDiaEntidad Nuevo(MenuDiaEntidad menuDia)
         {
             MENU_DEL_DIA menu = new MENU_DEL_DIA();
@@ -26,6 +31,11 @@ namespace DatosLinq
             menuDia.NumMen = menu.NUM_MEN;
             return menuDia;
         }
+        /// <summary>
+        /// Se obtendra los datos de un menu seleccionado para modificar datos
+        /// </summary>
+        /// <param name="menuDia">Variable donde se encuentra los datos del menu seleccionado</param>
+        /// <returns>Devuelve el menu con los datos actualizados</returns>
         public static MenuDiaEntidad Actualizar(MenuDiaEntidad menuDia)
         {
             try
@@ -52,6 +62,11 @@ namespace DatosLinq
                 throw;
             }
         }
+        /// <summary>
+        /// Se eliminara el menu seleccionado 
+        /// </summary>
+        /// <param name="id">Identificador del menu seleccionado</param>
+        /// <returns>Se devuelve un boolean que determina la accion realizada</returns>
         public static bool EliminarMenuDia(int id)
         {
             try
@@ -72,6 +87,10 @@ namespace DatosLinq
             }
             
         }
+        /// <summary>
+        /// Se enlistara los menus ingresados en la base de datos
+        /// </summary>
+        /// <returns>Devuelve todos los menus que se encuentran en la tabla</returns>
         public static List<MenuDiaEntidad> DevolverMenuDia()
         {
             List<MenuDiaEntidad> listaMenuDiaEntidad = new List<MenuDiaEntidad>();
@@ -105,6 +124,10 @@ namespace DatosLinq
                 throw;
             }
         }
+        /// <summary>
+        /// Se devuelve los menus seleccionado adjuntando las clases de los paltos correspondientes
+        /// </summary>
+        /// <returns>Obtenemos los datos de los platos ingresados en los menus</returns>
         public static List<MenuDiaJoin> DevolverMenuDiaJoin()
         {
             List<MenuDiaJoin> listaMenuDiaEntidad = new List<MenuDiaJoin>();
@@ -185,6 +208,11 @@ namespace DatosLinq
                 throw;
             }
         }
+        /// <summary>
+        /// Se obtendra un menu seleccionado
+        /// </summary>
+        /// <param name="id">Identificador del menu seleccionado</param>
+        /// <returns>Se devuelve el menu seleccionado junto a los datos</returns>
         public static MenuDiaEntidad DevolverMenuDiaPorId(int id)
         {
             MenuDiaEntidad menuDia = new MenuDiaEntidad();
@@ -201,6 +229,11 @@ namespace DatosLinq
             }
             return menuDia;
         }
+        /// <summary>
+        /// Se enlistara los menus que son filtrados por una fecha seleccionada 
+        /// </summary>
+        /// <param name="date">variable que sirve como filtro o condicion </param>
+        /// <returns>Devolvera los menus que se encuentran en una fecha establecida </returns>
         public static List<MenuDiaEntidad> DevolverMenuDiaPorFecha(DateTime date)
         {
             List<MenuDiaEntidad> listaMenuDiaEntidad = new List<MenuDiaEntidad>();
