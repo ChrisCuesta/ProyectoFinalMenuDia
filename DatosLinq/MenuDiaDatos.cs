@@ -233,7 +233,7 @@ namespace DatosLinq
         /// Se enlistara los menus que son filtrados por una fecha seleccionada 
         /// </summary>
         /// <param name="date">variable que sirve como filtro o condicion </param>
-        /// <returns>Devolvera los menus que se encuentran en una fecha establecida</returns>
+        /// <returns>Devolvera los menus que se encuentran en una fecha establecida </returns>
         public static List<MenuDiaEntidad> DevolverMenuDiaPorFecha(DateTime date)
         {
             List<MenuDiaEntidad> listaMenuDiaEntidad = new List<MenuDiaEntidad>();
