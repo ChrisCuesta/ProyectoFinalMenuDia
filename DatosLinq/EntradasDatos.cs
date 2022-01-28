@@ -139,7 +139,7 @@ namespace DatosLinq
         /// Se accede a una entrada seleccionada para obtener datos de los ingredientes
         /// </summary>
         /// <param name="id">Identificador de la entrada seleccionada</param>
-        /// <returns>retorna la entrada seleccionada junto a los ingredientes</returns>
+        /// <returns>retorna la entrada seleccionada junto a los ingredientes </returns>
         public static EntradasEntidad DevolverIngredientesEntradaPorId(int id)
         {
             EntradasEntidad entrada = new EntradasEntidad();
