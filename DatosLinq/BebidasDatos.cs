@@ -121,7 +121,7 @@ namespace DatosLinq
         /// Obtendra una bebida seleccionada junto a los datos proporcionados 
         /// </summary>
         /// <param name="id">Identificador de la bebida seleccionada</param>
-        /// <returns>Nos devuelve la bebida seleccionada con sus respectivos datos</returns>
+        /// <returns>Nos devuelve la bebida seleccionada con sus respectivos datos </returns>
         public static BebidasEntidad DevolverBebidaPorId(int id)
         {
             BebidasEntidad bebida = new BebidasEntidad();
