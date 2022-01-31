@@ -9,6 +9,11 @@ namespace DatosLinq
 {
     public static class SegundosDatos
     {
+        /// <summary>
+        /// Se ingresara un nuevo segundo 
+        /// </summary>
+        /// <param name="segundo">Variable donde se ingresa datos del nuevo segundo</param>
+        /// <returns>El segundo ingresado</returns>
         public static SegundosEntidad Nuevo(SegundosEntidad segundo)
         {
             SEGUNDOS s = new SEGUNDOS();
@@ -24,6 +29,11 @@ namespace DatosLinq
             segundo.IdSegundo = s.ID_SEG;
             return segundo;
         }
+        /// <summary>
+        /// Se modificar los datos ingresados en algun segundo
+        /// </summary>
+        /// <param name="segundo">Variable donde esta ingresado los datos del segundo</param>
+        /// <returns>Se devuelve el segundo con los datos modificados</returns>
         public static SegundosEntidad Actualizar(SegundosEntidad segundo)
         {
             try
@@ -47,6 +57,11 @@ namespace DatosLinq
                 throw;
             }
         }
+        /// <summary>
+        /// Se eliminara el el segundo seleccionado
+        /// </summary>
+        /// <param name="id">Identicador del segundo seleccionado</param>
+        /// <returns>Devuelve un boolean que determinara la accion de eliminar</returns>
         public static bool EliminarSegundo(int id)
         {
             try
@@ -67,6 +82,10 @@ namespace DatosLinq
             }
 
         }
+        /// <summary>
+        /// Se enlistara los segundos ingresados en la base de datos 
+        /// </summary>
+        /// <returns>Se devuleve los platos ingresador en la tabla</returns>
         public static List<SegundosEntidad> DevolverSegundos()
         {
             List<SegundosEntidad> listaSegundos = new List<SegundosEntidad>();
@@ -98,6 +117,11 @@ namespace DatosLinq
                 throw;
             }
         }
+        /// <summary>
+        /// Se devuelve el plato seleccionado junto a sus datos
+        /// </summary>
+        /// <param name="id">Identificador del plato seleccionado</param>
+        /// <returns>Devuelve el plato seleccionado con los datos establecidos</returns>
         public static SegundosEntidad DevolverSegundoPorId(int id)
         {
             SegundosEntidad segundo = new SegundosEntidad();
@@ -112,6 +136,11 @@ namespace DatosLinq
             }
             return segundo;
         }
+        /// <summary>
+        /// Se devuelve el plato seleccionado junto a sus datos para acceder a los ingredientes
+        /// </summary>
+        /// <param name="id">Identificador del plato seleccionado</param>
+        /// <returns>Devuelve el plato seleccionado con los datos establecidos para acceder a los ingredientes</returns>
         public static SegundosEntidad DevolverIngredientesSegundosPorId(int id)
         {
             SegundosEntidad segundo = new SegundosEntidad();
