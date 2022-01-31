@@ -8,6 +8,9 @@ namespace Entidades
 {
     public class PedidosEntidad
     {
+        /// <summary>
+        /// Se encapsulan los atributos de la clase
+        /// </summary>
         public int Id { get; set; }
         public int CantidadPedido { get; set; }
         public string NombreCliente { get; set; }
