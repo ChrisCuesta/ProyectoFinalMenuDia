@@ -32,3 +32,6 @@ Ing. Santiago David Jara Moya
 4. **Módulo sopa:** Este módulo permite crear, editar, eliminar y visualizar las sopas las cuales pueden agregarse al menú del día.
 5. **Módulo postre:** Este módulo permite crear, editar, eliminar y visualizar los postres los cuales pueden agregarse al menú del día.
 6. **Módulo bebidas:** Este módulo permite crear, editar, eliminar y visualizar las bebidas las cuales pueden agregarse al menú del día.
+## Instalación
+1. Nos dirigimos al enlace proporcionado por somee de descarga
+[enlace de descarga](http://www.proyectofinal1.somee.com/publish.htm)
