@@ -8,7 +8,7 @@ using DatosLinq;
 namespace Negocio
 {
     /// <summary>
-    /// clase para el negocio de bebidas
+    /// Clase para el negocio de bebidas
     /// </summary>
     public static class BebidasNegocio
     {
