@@ -4,6 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
+
+
+///
+/// <author> Anthony Paredes
+/// 
+
+
 namespace DatosLinq
 {
     public static class EntradasDatos
