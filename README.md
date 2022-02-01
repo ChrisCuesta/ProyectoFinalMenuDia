@@ -38,5 +38,5 @@ Ing. Santiago David Jara Moya
 ![image](https://user-images.githubusercontent.com/68314230/151980523-ba5c768c-aac3-4e4b-b7a7-7ac9d17a6268.png)
 3. Se nos descargara un archivo.exe, el cual debemos ejecutar.  <br>
 ![image](https://user-images.githubusercontent.com/68314230/151981080-1730908f-33c8-4cb3-8356-d9f38665f207.png)
-4. Se nos abrira nuestra app y ya podemos empezar a trabajar en nuestra aplicación   <br>
+4. Se Instalará y se nos abrirá nuestra app y ya podemos empezar a trabajar en nuestra aplicación   <br>
 ![image](https://user-images.githubusercontent.com/68314230/151981599-416e95e3-6167-491e-8022-d12c8fce12dd.png)
