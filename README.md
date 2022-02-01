@@ -33,5 +33,8 @@ Ing. Santiago David Jara Moya
 5. **Módulo postre:** Este módulo permite crear, editar, eliminar y visualizar los postres los cuales pueden agregarse al menú del día.
 6. **Módulo bebidas:** Este módulo permite crear, editar, eliminar y visualizar las bebidas las cuales pueden agregarse al menú del día.
 ## Instalación
-1. Nos dirigimos al enlace proporcionado por somee de descarga
-[enlace de descarga](http://www.proyectofinal1.somee.com/publish.htm)
+1. Nos dirigimos al enlace proporcionado por somee de [descarga](http://www.proyectofinal1.somee.com/publish.htm)
+2. Realizamos un click sobre el boton ejecutar.
+![image](https://user-images.githubusercontent.com/68314230/151980523-ba5c768c-aac3-4e4b-b7a7-7ac9d17a6268.png)
+3. Se nos descargara un archivo.exe, el cual debemos ejecutar.
+4. 
