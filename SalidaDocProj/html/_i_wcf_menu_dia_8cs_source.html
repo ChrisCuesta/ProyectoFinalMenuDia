@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DocProjFinal: Fichero Fuente D:/Documentos/Deberes6to/Aplicaciones Distribuidas/ProyectoFinalMenuDia/WcfMenuDia/IWcfMenuDia.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="MenuDia.jpg"/></td>
+  <td id="projectalign">
+   <div id="projectname">DocProjFinal<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Documentación Proyecto Final</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_0a15cee1de17d9175539557a1b7c24fa.html">Documentos</a></li><li class="navelem"><a class="el" href="dir_1093f762d5deb7718a22d48b00be0fca.html">Deberes6to</a></li><li class="navelem"><a class="el" href="dir_34c565ac200319eebba59d2403165a3c.html">Aplicaciones Distribuidas</a></li><li class="navelem"><a class="el" href="dir_668daf3e1b4058b1f9c799657e201ab9.html">ProyectoFinalMenuDia</a></li><li class="navelem"><a class="el" href="dir_a1ddb6055bdbdcf05c2badc55c96e176.html">WcfMenuDia</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">IWcfMenuDia.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using</span> System;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using</span> System.Linq;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using</span> System.Runtime.Serialization;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using</span> System.ServiceModel;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using</span> System.Text;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using</span> <a class="code hl_namespace" href="namespace_entidades.html">Entidades</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_wcf_menu_dia.html">WcfMenuDia</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="comment">// NOTA: puede usar el comando &quot;Rename&quot; del menú &quot;Refactorizar&quot; para cambiar el nombre de interfaz &quot;IWcfMenuDia&quot; en el código y en el archivo de configuración a la vez.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    [ServiceContract]</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html">   12</a></span>    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html">IWcfMenuDia</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="comment">//Menu dia</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span>        [OperationContract]</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ae25f8e4921847c32901fe828b1936650">   21</a></span>        <a class="code hl_class" href="class_entidades_1_1_menu_dia_entidad.html">MenuDiaEntidad</a> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ae25f8e4921847c32901fe828b1936650">GuardarMenuDia</a>(<a class="code hl_class" href="class_entidades_1_1_menu_dia_entidad.html">MenuDiaEntidad</a> menuDia);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        [OperationContract]</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#aee320bd1dbd4d7ebbea6c3cd4a4b1fe0">   27</a></span>        List&lt;MenuDiaEntidad&gt; <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#aee320bd1dbd4d7ebbea6c3cd4a4b1fe0">DevolverListaMenuDia</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        [OperationContract]</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#af654176cbcd137a01036a64d9baa81f5">   33</a></span>        List&lt;MenuDiaJoin&gt; <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#af654176cbcd137a01036a64d9baa81f5">DevolverListaMenuDiaJoin</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        [OperationContract]</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#aaa45268dc14426a288ba647cde04e3ec">   40</a></span>        <a class="code hl_class" href="class_entidades_1_1_menu_dia_entidad.html">MenuDiaEntidad</a> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#aaa45268dc14426a288ba647cde04e3ec">DevolverMenuDiaPorId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        [OperationContract]</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ac253f724ae303776cd97a31e2a53ef9f">   47</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ac253f724ae303776cd97a31e2a53ef9f">EliminarMenuDia</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        [OperationContract]</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a1f634439d4e0efa7b0d52e059b536c27">   54</a></span>        List&lt;MenuDiaEntidad&gt; <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a1f634439d4e0efa7b0d52e059b536c27">DevolverMenuDiaPorFecha</a>(DateTime date);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="comment">//Sopas</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment"></span>        [OperationContract]</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a97c7ada3d4b4935b8d00ec87201b95ac">   62</a></span>        <a class="code hl_class" href="class_entidades_1_1_sopas_entidad.html">SopasEntidad</a> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a97c7ada3d4b4935b8d00ec87201b95ac">GuardarSopa</a>(<a class="code hl_class" href="class_entidades_1_1_sopas_entidad.html">SopasEntidad</a> sopaDia);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        [OperationContract]</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ab1589ba8832f1171984a1381bcde6306">   68</a></span>        List&lt;SopasEntidad&gt; <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ab1589ba8832f1171984a1381bcde6306">DevolverListaSopas</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        [OperationContract]</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a88f002f756626e0e8d2961ec50daf083">   75</a></span>        <a class="code hl_class" href="class_entidades_1_1_sopas_entidad.html">SopasEntidad</a> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a88f002f756626e0e8d2961ec50daf083">DevolverSopasPorId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        [OperationContract]</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#af507db150b888ef728d2a666609e73b5">   82</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#af507db150b888ef728d2a666609e73b5">EliminarSopa</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        [OperationContract]</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ab92d2141c697be4b6b204bc0024e7719">   89</a></span>        <a class="code hl_class" href="class_entidades_1_1_sopas_entidad.html">SopasEntidad</a> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ab92d2141c697be4b6b204bc0024e7719">DevolverIngredientesSopasPorId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="comment">//Segundos</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment"></span>        [OperationContract]</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#af07244af0d4bd4d6224a18857383142b">   97</a></span>        <a class="code hl_class" href="class_entidades_1_1_segundos_entidad.html">SegundosEntidad</a> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#af07244af0d4bd4d6224a18857383142b">GuardarSegundo</a>(<a class="code hl_class" href="class_entidades_1_1_segundos_entidad.html">SegundosEntidad</a> segundo);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        [OperationContract]</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ab312d4a3d847c9a6a6fd9c983087d056">  103</a></span>        List&lt;SegundosEntidad&gt; <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ab312d4a3d847c9a6a6fd9c983087d056">DevolverListaSegundos</a>();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        [OperationContract]</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#aa26c4e49d7bece28f9b9b053aaf27eb4">  110</a></span>        <a class="code hl_class" href="class_entidades_1_1_segundos_entidad.html">SegundosEntidad</a> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#aa26c4e49d7bece28f9b9b053aaf27eb4">DevolverSegundosPorId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        [OperationContract]</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ab6bb220c4eef915f2fba1b95b1fa5911">  117</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ab6bb220c4eef915f2fba1b95b1fa5911">EliminarSegundo</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        [OperationContract]</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a4d5df88bd1e01703f384a1cad58df4ae">  124</a></span>        <a class="code hl_class" href="class_entidades_1_1_segundos_entidad.html">SegundosEntidad</a> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a4d5df88bd1e01703f384a1cad58df4ae">DevolverIngredientesSegundoPorId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="comment">//Bebidas</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment"></span>        [OperationContract]</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a8fdcc0d37c52d37e71510bf3dcc22dbb">  132</a></span>        <a class="code hl_class" href="class_entidades_1_1_bebidas_entidad.html">BebidasEntidad</a> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a8fdcc0d37c52d37e71510bf3dcc22dbb">GuardarBebida</a>(<a class="code hl_class" href="class_entidades_1_1_bebidas_entidad.html">BebidasEntidad</a> bebidas);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        [OperationContract]</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a561e1b3a5c6a762fea9b3cf85d0d2105">  138</a></span>        List&lt;BebidasEntidad&gt; <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a561e1b3a5c6a762fea9b3cf85d0d2105">DevolverListaBebidas</a>();</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        [OperationContract]</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a999f17673767fe29f21acafbb32101ea">  145</a></span>        <a class="code hl_class" href="class_entidades_1_1_bebidas_entidad.html">BebidasEntidad</a> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a999f17673767fe29f21acafbb32101ea">DevolverBebidasPorId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        [OperationContract]</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a56a105c3183a43865def21a95f9fedfc">  152</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a56a105c3183a43865def21a95f9fedfc">EliminarBebida</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        [OperationContract]</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a96d250f25897542cc8679cadf1eddfc8">  159</a></span>        <a class="code hl_class" href="class_entidades_1_1_bebidas_entidad.html">BebidasEntidad</a> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a96d250f25897542cc8679cadf1eddfc8">DevolverIngredientesBebidaPorId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="comment">//Entradas</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment"></span>        [OperationContract]</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a6cd47d538c7ba2ac5ebbb8aae6bdbca5">  168</a></span>        <a class="code hl_class" href="class_entidades_1_1_entradas_entidad.html">EntradasEntidad</a> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a6cd47d538c7ba2ac5ebbb8aae6bdbca5">GuardarEntrada</a>(<a class="code hl_class" href="class_entidades_1_1_entradas_entidad.html">EntradasEntidad</a> entrada);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        [OperationContract]</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a01cb4308b9fe7aa3ca2cb84470cde2d1">  174</a></span>        List&lt;EntradasEntidad&gt; <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a01cb4308b9fe7aa3ca2cb84470cde2d1">DevolverListaEntrada</a>();</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        [OperationContract]</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#af2b73404c1c44f08b2360c97dba9af5d">  181</a></span>        <a class="code hl_class" href="class_entidades_1_1_entradas_entidad.html">EntradasEntidad</a> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#af2b73404c1c44f08b2360c97dba9af5d">DevolverEntradasPorId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        [OperationContract]</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ab1cd028d4a879e38aa8df24520f3c7eb">  188</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ab1cd028d4a879e38aa8df24520f3c7eb">EliminarEntrada</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        [OperationContract]</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a5e251652f62bccb443b5e3c0542bc650">  195</a></span>        <a class="code hl_class" href="class_entidades_1_1_entradas_entidad.html">EntradasEntidad</a> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a5e251652f62bccb443b5e3c0542bc650">DevolverIngredientesEntradaPorId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="comment">//pedidos</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="comment"></span>        [OperationContract]</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a80f2374ded059b0fe1646fb453cbe00a">  203</a></span>        <a class="code hl_class" href="class_entidades_1_1_pedidos_entidad.html">PedidosEntidad</a> <a class="code hl_function" href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a80f2374ded059b0fe1646fb453cbe00a">GuardarPedido</a>(<a class="code hl_class" href="class_entidades_1_1_pedidos_entidad.html">PedidosEntidad</a> pedido);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>}</div>
+<div class="ttc" id="aclass_entidades_1_1_bebidas_entidad_html"><div class="ttname"><a href="class_entidades_1_1_bebidas_entidad.html">Entidades.BebidasEntidad</a></div><div class="ttdef"><b>Definition:</b> <a href="_bebidas_entidad_8cs_source.html#l00009">BebidasEntidad.cs:10</a></div></div>
+<div class="ttc" id="aclass_entidades_1_1_entradas_entidad_html"><div class="ttname"><a href="class_entidades_1_1_entradas_entidad.html">Entidades.EntradasEntidad</a></div><div class="ttdef"><b>Definition:</b> <a href="_entradas_entidad_8cs_source.html#l00009">EntradasEntidad.cs:10</a></div></div>
+<div class="ttc" id="aclass_entidades_1_1_menu_dia_entidad_html"><div class="ttname"><a href="class_entidades_1_1_menu_dia_entidad.html">Entidades.MenuDiaEntidad</a></div><div class="ttdef"><b>Definition:</b> <a href="_menu_dia_entidad_8cs_source.html#l00009">MenuDiaEntidad.cs:10</a></div></div>
+<div class="ttc" id="aclass_entidades_1_1_pedidos_entidad_html"><div class="ttname"><a href="class_entidades_1_1_pedidos_entidad.html">Entidades.PedidosEntidad</a></div><div class="ttdef"><b>Definition:</b> <a href="_pedidos_entidad_8cs_source.html#l00009">PedidosEntidad.cs:10</a></div></div>
+<div class="ttc" id="aclass_entidades_1_1_segundos_entidad_html"><div class="ttname"><a href="class_entidades_1_1_segundos_entidad.html">Entidades.SegundosEntidad</a></div><div class="ttdef"><b>Definition:</b> <a href="_segundos_entidad_8cs_source.html#l00009">SegundosEntidad.cs:10</a></div></div>
+<div class="ttc" id="aclass_entidades_1_1_sopas_entidad_html"><div class="ttname"><a href="class_entidades_1_1_sopas_entidad.html">Entidades.SopasEntidad</a></div><div class="ttdef"><b>Definition:</b> <a href="_sopas_entidad_8cs_source.html#l00009">SopasEntidad.cs:10</a></div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html">WcfMenuDia.IWcfMenuDia</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_wcf_menu_dia_8cs_source.html#l00012">IWcfMenuDia.cs:13</a></div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_a01cb4308b9fe7aa3ca2cb84470cde2d1"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a01cb4308b9fe7aa3ca2cb84470cde2d1">WcfMenuDia.IWcfMenuDia.DevolverListaEntrada</a></div><div class="ttdeci">List&lt; EntradasEntidad &gt; DevolverListaEntrada()</div><div class="ttdoc">Método para listar Entradas</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_a1f634439d4e0efa7b0d52e059b536c27"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a1f634439d4e0efa7b0d52e059b536c27">WcfMenuDia.IWcfMenuDia.DevolverMenuDiaPorFecha</a></div><div class="ttdeci">List&lt; MenuDiaEntidad &gt; DevolverMenuDiaPorFecha(DateTime date)</div><div class="ttdoc">Método para devolver el menú del día por su fecha</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_a4d5df88bd1e01703f384a1cad58df4ae"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a4d5df88bd1e01703f384a1cad58df4ae">WcfMenuDia.IWcfMenuDia.DevolverIngredientesSegundoPorId</a></div><div class="ttdeci">SegundosEntidad DevolverIngredientesSegundoPorId(int id)</div><div class="ttdoc">Método para obtener ingredientes del segundo por su Id</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_a561e1b3a5c6a762fea9b3cf85d0d2105"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a561e1b3a5c6a762fea9b3cf85d0d2105">WcfMenuDia.IWcfMenuDia.DevolverListaBebidas</a></div><div class="ttdeci">List&lt; BebidasEntidad &gt; DevolverListaBebidas()</div><div class="ttdoc">Método para listar bebidas</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_a56a105c3183a43865def21a95f9fedfc"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a56a105c3183a43865def21a95f9fedfc">WcfMenuDia.IWcfMenuDia.EliminarBebida</a></div><div class="ttdeci">bool EliminarBebida(int id)</div><div class="ttdoc">Método para eliminar bebida por su Id</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_a5e251652f62bccb443b5e3c0542bc650"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a5e251652f62bccb443b5e3c0542bc650">WcfMenuDia.IWcfMenuDia.DevolverIngredientesEntradaPorId</a></div><div class="ttdeci">EntradasEntidad DevolverIngredientesEntradaPorId(int id)</div><div class="ttdoc">Método para obtener ingredientes de la entrada</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_a6cd47d538c7ba2ac5ebbb8aae6bdbca5"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a6cd47d538c7ba2ac5ebbb8aae6bdbca5">WcfMenuDia.IWcfMenuDia.GuardarEntrada</a></div><div class="ttdeci">EntradasEntidad GuardarEntrada(EntradasEntidad entrada)</div><div class="ttdoc">Método para guardar una Entrada</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_a80f2374ded059b0fe1646fb453cbe00a"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a80f2374ded059b0fe1646fb453cbe00a">WcfMenuDia.IWcfMenuDia.GuardarPedido</a></div><div class="ttdeci">PedidosEntidad GuardarPedido(PedidosEntidad pedido)</div><div class="ttdoc">Método para guardar pedido</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_a88f002f756626e0e8d2961ec50daf083"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a88f002f756626e0e8d2961ec50daf083">WcfMenuDia.IWcfMenuDia.DevolverSopasPorId</a></div><div class="ttdeci">SopasEntidad DevolverSopasPorId(int id)</div><div class="ttdoc">Método para obtener sopa por su Id</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_a8fdcc0d37c52d37e71510bf3dcc22dbb"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a8fdcc0d37c52d37e71510bf3dcc22dbb">WcfMenuDia.IWcfMenuDia.GuardarBebida</a></div><div class="ttdeci">BebidasEntidad GuardarBebida(BebidasEntidad bebidas)</div><div class="ttdoc">Método para guardar una bebida</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_a96d250f25897542cc8679cadf1eddfc8"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a96d250f25897542cc8679cadf1eddfc8">WcfMenuDia.IWcfMenuDia.DevolverIngredientesBebidaPorId</a></div><div class="ttdeci">BebidasEntidad DevolverIngredientesBebidaPorId(int id)</div><div class="ttdoc">Método para obtener ingredientes de la bebida</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_a97c7ada3d4b4935b8d00ec87201b95ac"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a97c7ada3d4b4935b8d00ec87201b95ac">WcfMenuDia.IWcfMenuDia.GuardarSopa</a></div><div class="ttdeci">SopasEntidad GuardarSopa(SopasEntidad sopaDia)</div><div class="ttdoc">Método para guardar una sopa</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_a999f17673767fe29f21acafbb32101ea"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#a999f17673767fe29f21acafbb32101ea">WcfMenuDia.IWcfMenuDia.DevolverBebidasPorId</a></div><div class="ttdeci">BebidasEntidad DevolverBebidasPorId(int id)</div><div class="ttdoc">Método para devolver bebidas por su Id</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_aa26c4e49d7bece28f9b9b053aaf27eb4"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#aa26c4e49d7bece28f9b9b053aaf27eb4">WcfMenuDia.IWcfMenuDia.DevolverSegundosPorId</a></div><div class="ttdeci">SegundosEntidad DevolverSegundosPorId(int id)</div><div class="ttdoc">Método para obtener un segundo por su Id</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_aaa45268dc14426a288ba647cde04e3ec"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#aaa45268dc14426a288ba647cde04e3ec">WcfMenuDia.IWcfMenuDia.DevolverMenuDiaPorId</a></div><div class="ttdeci">MenuDiaEntidad DevolverMenuDiaPorId(int id)</div><div class="ttdoc">Método para devolver menú del día por su Id</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_ab1589ba8832f1171984a1381bcde6306"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ab1589ba8832f1171984a1381bcde6306">WcfMenuDia.IWcfMenuDia.DevolverListaSopas</a></div><div class="ttdeci">List&lt; SopasEntidad &gt; DevolverListaSopas()</div><div class="ttdoc">Método para listar las sopas</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_ab1cd028d4a879e38aa8df24520f3c7eb"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ab1cd028d4a879e38aa8df24520f3c7eb">WcfMenuDia.IWcfMenuDia.EliminarEntrada</a></div><div class="ttdeci">bool EliminarEntrada(int id)</div><div class="ttdoc">Método para eliminar una entrada por su Id</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_ab312d4a3d847c9a6a6fd9c983087d056"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ab312d4a3d847c9a6a6fd9c983087d056">WcfMenuDia.IWcfMenuDia.DevolverListaSegundos</a></div><div class="ttdeci">List&lt; SegundosEntidad &gt; DevolverListaSegundos()</div><div class="ttdoc">Método para listar los Segundos</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_ab6bb220c4eef915f2fba1b95b1fa5911"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ab6bb220c4eef915f2fba1b95b1fa5911">WcfMenuDia.IWcfMenuDia.EliminarSegundo</a></div><div class="ttdeci">bool EliminarSegundo(int id)</div><div class="ttdoc">Método para eliminar un segundo por su Id</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_ab92d2141c697be4b6b204bc0024e7719"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ab92d2141c697be4b6b204bc0024e7719">WcfMenuDia.IWcfMenuDia.DevolverIngredientesSopasPorId</a></div><div class="ttdeci">SopasEntidad DevolverIngredientesSopasPorId(int id)</div><div class="ttdoc">Método para obtener ingredientes de la sopa por su Id</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_ac253f724ae303776cd97a31e2a53ef9f"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ac253f724ae303776cd97a31e2a53ef9f">WcfMenuDia.IWcfMenuDia.EliminarMenuDia</a></div><div class="ttdeci">bool EliminarMenuDia(int id)</div><div class="ttdoc">Método para eliminar el menú del día por el Id</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_ae25f8e4921847c32901fe828b1936650"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#ae25f8e4921847c32901fe828b1936650">WcfMenuDia.IWcfMenuDia.GuardarMenuDia</a></div><div class="ttdeci">MenuDiaEntidad GuardarMenuDia(MenuDiaEntidad menuDia)</div><div class="ttdoc">Método para guardar el menú del día</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_aee320bd1dbd4d7ebbea6c3cd4a4b1fe0"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#aee320bd1dbd4d7ebbea6c3cd4a4b1fe0">WcfMenuDia.IWcfMenuDia.DevolverListaMenuDia</a></div><div class="ttdeci">List&lt; MenuDiaEntidad &gt; DevolverListaMenuDia()</div><div class="ttdoc">Método para listar menús</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_af07244af0d4bd4d6224a18857383142b"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#af07244af0d4bd4d6224a18857383142b">WcfMenuDia.IWcfMenuDia.GuardarSegundo</a></div><div class="ttdeci">SegundosEntidad GuardarSegundo(SegundosEntidad segundo)</div><div class="ttdoc">Método para guardar un segundo</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_af2b73404c1c44f08b2360c97dba9af5d"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#af2b73404c1c44f08b2360c97dba9af5d">WcfMenuDia.IWcfMenuDia.DevolverEntradasPorId</a></div><div class="ttdeci">EntradasEntidad DevolverEntradasPorId(int id)</div><div class="ttdoc">Método para devolver entrada por su Id</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_af507db150b888ef728d2a666609e73b5"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#af507db150b888ef728d2a666609e73b5">WcfMenuDia.IWcfMenuDia.EliminarSopa</a></div><div class="ttdeci">bool EliminarSopa(int id)</div><div class="ttdoc">Método para eliminar la Sopa</div></div>
+<div class="ttc" id="ainterface_wcf_menu_dia_1_1_i_wcf_menu_dia_html_af654176cbcd137a01036a64d9baa81f5"><div class="ttname"><a href="interface_wcf_menu_dia_1_1_i_wcf_menu_dia.html#af654176cbcd137a01036a64d9baa81f5">WcfMenuDia.IWcfMenuDia.DevolverListaMenuDiaJoin</a></div><div class="ttdeci">List&lt; MenuDiaJoin &gt; DevolverListaMenuDiaJoin()</div><div class="ttdoc">Método para devolver lista de menúsJoin</div></div>
+<div class="ttc" id="anamespace_entidades_html"><div class="ttname"><a href="namespace_entidades.html">Entidades</a></div><div class="ttdef"><b>Definition:</b> <a href="_bebidas_entidad_8cs_source.html#l00007">BebidasEntidad.cs:8</a></div></div>
+<div class="ttc" id="anamespace_wcf_menu_dia_html"><div class="ttname"><a href="namespace_wcf_menu_dia.html">WcfMenuDia</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_menu_dia_service_8cs_source.html#l00011">IMenuDiaService.cs:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

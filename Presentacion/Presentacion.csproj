@@ -14,7 +14,11 @@
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <PublishUrl>ftp://155.254.244.30/www.proyectoFinal1.somee.com/</PublishUrl>
+<<<<<<< HEAD
     <Install>true</Install>
+=======
+    <Install>false</Install>
+>>>>>>> 1bf4791c2092a4513a4c5ce801b29a44bff762a0
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
@@ -23,10 +27,17 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+<<<<<<< HEAD
     <InstallUrl>http://www.proyectoFinal1.somee.com/</InstallUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <ApplicationRevision>2</ApplicationRevision>
+=======
+    <InstallUrl>http://www.proyectoFinal1.somee.com/app/</InstallUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>1</ApplicationRevision>
+>>>>>>> 1bf4791c2092a4513a4c5ce801b29a44bff762a0
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -52,7 +63,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
+<<<<<<< HEAD
     <ManifestCertificateThumbprint>9FDD1F13E627E9E1104EC0E6EE1E559839F543B3</ManifestCertificateThumbprint>
+=======
+    <ManifestCertificateThumbprint>5FCA2B43A8D59B795D4DEC3C39D40D9C0DF1FC5C</ManifestCertificateThumbprint>
+>>>>>>> 1bf4791c2092a4513a4c5ce801b29a44bff762a0
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>Presentacion_TemporaryKey.pfx</ManifestKeyFile>
