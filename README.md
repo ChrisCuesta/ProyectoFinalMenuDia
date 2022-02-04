@@ -35,7 +35,7 @@ Ing. Santiago David Jara Moya
 ## Instalación
 1. Nos dirigimos al enlace proporcionado por somee de [descarga](http://www.proyectofinal1.somee.com/publish.htm)
 > **NOTA:** necesitas tener instalado en tu maquina Microsoft .NET Framework 4.7.2 x86 o x64 para que la aplicación pueda funcionar.  <br>
-2. Realizamos un click sobre el boton instalar.  <br>
+2. Realizamos un click sobre el botón instalar.  <br>
 ![image](https://user-images.githubusercontent.com/68314230/151983307-1c521de6-10d4-4612-b3ea-645cdb67ae27.png)
 3. Se nos descargara un archivo.exe, el cual debemos ejecutar.  <br>
 ![image](https://user-images.githubusercontent.com/68314230/151981080-1730908f-33c8-4cb3-8356-d9f38665f207.png)
