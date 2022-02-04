@@ -9,12 +9,16 @@ namespace DatosLinq
 {
     public static class BebidasDatos
     {
-
+        /// <summary>
+        /// Ingresaremos una nueva bebida
+        /// </summary>
+        /// <param name="bebida">Variable con la cual se agregara la nueva bebida</param>
+        /// <returns>La varibale ingresada junto a sus datos</returns>
         public static BebidasEntidad Nuevo(BebidasEntidad bebida)
         {
             BEBIDAS b = new BEBIDAS();
             b.ID_BEB = bebida.IdBebida;
-           b.NOM_BEB = bebida.NomBebida;
+            b.NOM_BEB = bebida.NomBebida;
             b.IMG_BEB = bebida.ImgBebida;
             b.ING_BEB = bebida.IngBebida;
             using (DataClasses1DataContext contexto = new DataClasses1DataContext())
@@ -25,6 +29,11 @@ namespace DatosLinq
             bebida.IdBebida= b.ID_BEB;
             return bebida;
         }
+        /// <summary>
+        /// So obtendra los datos de la bebida seleccionada
+        /// </summary>
+        /// <param name="bebida">Variable que identifica la beboda seleccionada</param>
+        /// <returns>La bebida que seleccionamos junto a los datos modificados</returns>
         public static BebidasEntidad Actualizar(BebidasEntidad bebida)
         {
             try
@@ -48,6 +57,11 @@ namespace DatosLinq
                 throw;
             }
         }
+        /// <summary>
+        /// Se obtendra la bebida seleccionada para eliminarla 
+        /// </summary>
+        /// <param name="id">Identificador de la bebida seleccionada</param>
+        /// <returns>Un boolean que identifica la accion de eliminar la bebida</returns>
         public static bool EliminarBebidas(int id)
         {
             try
@@ -68,6 +82,10 @@ namespace DatosLinq
             }
 
         }
+        /// <summary>
+        /// Elistara las bebidas ingresadas en la base de datos
+        /// </summary>
+        /// <returns>La lista de bebidas ingresadas junto a sus datos</returns>
         public static List<BebidasEntidad> DevolverBebidas()
         {
             List<BebidasEntidad> listaBebidas = new List<BebidasEntidad>();
@@ -99,6 +117,11 @@ namespace DatosLinq
                 throw;
             }
         }
+        /// <summary>
+        /// Obtendra una bebida seleccionada junto a los datos proporcionados 
+        /// </summary>
+        /// <param name="id">Identificador de la bebida seleccionada</param>
+        /// <returns>Nos devuelve la bebida seleccionada con sus respectivos datos </returns>
         public static BebidasEntidad DevolverBebidaPorId(int id)
         {
             BebidasEntidad bebida = new BebidasEntidad();
@@ -113,6 +136,11 @@ namespace DatosLinq
             }
             return bebida;
         }
+        /// <summary>
+        /// Obtendremos la bebida seleccionada para acceder a sus ingredientes 
+        /// </summary>
+        /// <param name="id">Identificador de la bebida seleccionada para acceder a sus ingredientes</param>
+        /// <returns>La bebida seleccionada</returns>
         public static BebidasEntidad DevolverIngredientesBebidaPorId(int id)
         {
             BebidasEntidad bebida = new BebidasEntidad();

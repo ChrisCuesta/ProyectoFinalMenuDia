@@ -9,6 +9,11 @@ namespace DatosLinq
 {
     public static class SopasDatos
     {
+        /// <summary>
+        /// Se ingresara una nueva sopa
+        /// </summary>
+        /// <param name="sopaDia">Variable donde se ingresa los datos de la sopa</param>
+        /// <returns>Devuelve la sopa ingresada</returns>
         public static SopasEntidad Nuevo(SopasEntidad sopaDia)
         {
             SOPAS sopa = new SOPAS();
@@ -24,6 +29,11 @@ namespace DatosLinq
             sopaDia.IdSopa = sopa.ID_SOP;
             return sopaDia;
         }
+        /// <summary>
+        /// Se modificara los datos de la sopa
+        /// </summary>
+        /// <param name="sopaDia">Variable donde se guardan los datos</param>
+        /// <returns>La sopa con los datos modificados</returns>
         public static SopasEntidad Actualizar(SopasEntidad sopaDia)
         {
             try
@@ -46,6 +56,11 @@ namespace DatosLinq
                 throw;
             }
         }
+        /// <summary>
+        /// Se eliminara la sopa
+        /// </summary>
+        /// <param name="id">Identificador de la sopa seleccionada</param>
+        /// <returns>Se devuelve un boolean que determina la accion</returns>
         public static bool EliminarSopa(int id)
         {
             try
@@ -66,6 +81,10 @@ namespace DatosLinq
             }
 
         }
+        /// <summary>
+        /// Se enlistara las sopas ingresadas en la base de datos
+        /// </summary>
+        /// <returns>Devuelve la lista de sopas que estan en la tabla</returns>
         public static List<SopasEntidad> DevolverSopas()
         {
             List<SopasEntidad> listaSopas = new List<SopasEntidad>();
@@ -97,6 +116,11 @@ namespace DatosLinq
                 throw;
             }
         }
+        /// <summary>
+        /// Se obtendra la sopa junto a los datos seleccionados
+        /// </summary>
+        /// <param name="id">Identificador de la sopa seleccionada</param>
+        /// <returns>Devuelve la sopa seleccionada junto a sus datos</returns>
         public static SopasEntidad DevolverSopasPorId(int id)
         {
             SopasEntidad sopa = new SopasEntidad();
@@ -111,6 +135,11 @@ namespace DatosLinq
             }
             return sopa;
         }
+        /// <summary>
+        /// Se obtiene la sopa seleccionada para acceder a sus ingredientes
+        /// </summary>
+        /// <param name="id">Identificador de la sopa seleccionada</param>
+        /// <returns>Se devuelve los datos de la sopa junto al acceso a los ingredientes</returns>
         public static SopasEntidad DevolverIngredientesSopasPorId(int id)
         {
             SopasEntidad sopa = new SopasEntidad();

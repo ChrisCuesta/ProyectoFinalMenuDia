@@ -8,9 +8,16 @@ using DatosLinq;
 
 namespace Negocio
 {
+    /// <summary>
+    /// Clase para el negocio de pedidos
+    /// </summary>
     public static class PedidosNegocio
     {
-
+        /// <summary>
+        /// Guardars the specified pedido.
+        /// </summary>
+        /// <param name="pedido">The pedido.</param>
+        /// <returns>return the PedidosEntidad</returns>
         public static PedidosEntidad Guardar(PedidosEntidad pedido)
         {
             if (pedido.Id == 0)
